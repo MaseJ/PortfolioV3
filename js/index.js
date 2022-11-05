@@ -30,23 +30,23 @@ $(".page1").mouseenter(function() {
     $("#preview").css({ "background-image": ''});
 });
 $(".page2").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/tenziesGif.gif")'});
+    $("#preview").css({ "background-image": 'url("../images/tenzies.jpg")'});
     $("#about--text").css({ "visibility": "hidden" });
 });
 $(".page3").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/blackJackGif.gif")'});
+    $("#preview").css({ "background-image": 'url("../images/blackJack.jpg")'});
     $("#about--text").css({ "visibility": "hidden" });
 });
 $(".page4").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/quizGif.gif")'});
+    $("#preview").css({ "background-image": 'url("../images/quiz.jpg")'});
     $("#about--text").css({ "visibility": "hidden" });
 });
 $(".page5").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/theFishNetGif.gif")'});
+    $("#preview").css({ "background-image": 'url("../images/theFishNet.jpg")'});
     $("#about--text").css({ "visibility": "hidden" });
 });
 $(".page6").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/ArtGalleryGif.gif")'});
+    $("#preview").css({ "background-image": 'url("../images/ArtGallery.jpg")'});
     $("#about--text").css({ "visibility": "hidden" });
 });
 
