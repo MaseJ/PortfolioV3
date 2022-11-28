@@ -6,76 +6,95 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Mason Johnson</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fondamento:ital@1&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Portfolio Smooth Scroll</title>
 </head>
 <body>
-
-    <div class="overlay">
-        <p class="screen">MASON JOHNSON</p>
-        <div class="intro">
-                <button class="myBtn" onclick="fadeOut()">EXPLORE</button>
-        </div>
-    </div>
-
-    <div class="overlay-2"></div>
-
-
-    <div id="content">
-
-        <div id="nav" class="fade">
-            <h1 id="title">Mason Johnson</h1>
-            <div id="links">
-                <a href="https://github.com/MaseJ">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/mason-johnson-a30a12235/">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
+    <div id="container">
+        <div class="cursor"></div>
+        <h1 class="intro--text1 intro--text">DON'T</h1>
+        <h1 class="intro--text2 intro--text">STOP</h1>
+        <h1 class="intro--text3 intro--text">CREATING</h1>
+        <iframe src='https://my.spline.design/untitled-c51a62e4de479ee76deb762b460bce67/' frameborder='0' width='100%' height='100%'></iframe>
+    
+        <div id="title">
+            <div id="name">
+                <p>MASON JOHNSON</p>
             </div>
-        </div>
-        <div id="main" class="fade">
-            <div id="item-0">
-                <iframe class="object" id="4ab7a277-4ea4-44a2-8ea2-a0752e338f66" src="https://app.vectary.com/viewer/v1/?model=4ab7a277-4ea4-44a2-8ea2-a0752e338f66&env=studio2&turntable=0.5&showPreloader=0&showInteractionPrompt=0" frameborder="0" width="200%" height="580"></iframe>
+            <div id="intro">
+                <p>Web Design,<br>Frontend Developer,<br>UI/UX Design,<br><br>Creator at heart.</p>
             </div>
             
-            <div id="item-1">
-                <p id="pages">
-                    const &nbsp;pages &nbsp;= &nbsp;[<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a class="page page1" data-replace="about,"><span>about,</span></a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://masej.github.io/Tenzies-MJ/" class="page page2" data-replace="tenzies,"><span>tenzies,</span></a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://masej.github.io/BlackJack-MJ/" class="page page3" data-replace="blackJack,"><span>blackJack,</span></a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://masej.github.io/QuizMaker-MJ" class="page page4" data-replace="quizMaker,"><span>quizMaker,</span></a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://devsketchcode.github.io/Capstone_TheFishNet/" class="page page5" data-replace="theFishNet,"><span>theFishNet,</span></a><br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://masej.github.io/MockArtGallery/" class="page page6" data-replace="artGallery"><span>artGallery</span></a><br>
-                    ]<br>
+        </div>
+    
+        <div id="content">
+    
+            <div id="item1" class="item">
+                <div class="img link"></div>
+                <div class="item--text">
+                    <h1 id="about">ABOUT</h1>
+                    <span>01/ The creative adult is the child who survived</span>
+                    <p><br>Hi, I'm Mason. I currently reside in Minnesota. I like to make things, with a emphasis on <span class="bold">design</span> and <span class="bold">functionality</span>. Ever since I was a kid I have enjoyed art and have an appreciation for art and designs where the creators passion shows through.</p>
+                </div>
+            </div>
+    
+            <div id="item2" class="item">
+                <div class="img link"></div>
+                <div class="item--text">
+                    <h1 id="projects">PROJECTS</h1>
+                    <span>02/ Everything you can imagine is real</span>
+                    <p><br>I like to create a variety of projects. I love starting with an <span class="bold">idea</span>, then transforming that idea into a <span class="bold">design</span>, and lastly creating an <span>experience</span>.</p>
+                </div>
+            </div>
+    
+            <div id="item3" class="item">
+                <div class="img link"></div>
+                <div class="item--text">
+                    <h1 id="tools">TOOLS</h1>
+                    <span>03/ Study the know and explore the unknown</span>
+                    <p><br>VS Code is my home and JavaScript is my bestfriend. I use a variety of languages and enjoy learning new ones. Most of the time I use vanillia <span class="bold">JavaScript</span> & <span class="bold">CSS/Sass</span> but will use frameworks such as <span class="bold">React</span> and <span class="bold">Vue</span> at times. I will often utilize JavaScript plugins to make creative animations such as <span class="bold">GSAP</span>.</p>
+                </div>
+                
+            </div>
+    
+            <div id="item4" class="item">
+                <div class="img link"></div>
+                <div class="item--text">
+                    <h1 id="inspiration">INSPIRATION</h1>
+                    <span>04/ Everything has its beauty, but not everyone sees it</span>
+                    <p><br>Inspiration can come from anywhere. At the moment I heavily focus on <span class="bold">minimalism</span>. A simple clean looking design can go a long way. I also take inspiration from <span class="bold">anti-designs</span> and <span class="bold">brutalism</span>.</p>
+                </div>
+            </div>
+    
+            <div id="item5" class="item">
+                <div class="img link"></div>
+                <div class="item--text">
+                    <h1 id="mission">MISSION</h1>
+                    <span>05/ Persistence is the winning factor</span>
+                    <p><br>I want to grow as developer, designer, and as a <span class="bold">person</span>. Designing and creating things makes me <span class="bold">happy</span>. I want the chance to create things for others that makes them feel the same.</p>
+                </div>
+            </div>
+    
+        </div>
+    
+        <div id="footer">
+            <div id="footer--text">
+                <p>Thank you for checking out my work. If you would like to know more and connect with me, my contact information is below. 
+                    <br><br>mase22john@gmail.com<br>
+                    <a class="link" href="https://www.linkedin.com/in/mason-johnson-a30a12235/">LinkedIn</a><br>
+                    <a class="link" href="https://github.com/MaseJ">GitHub</a><br>
+                    <a class="link" href="https://github.com/MaseJ/Concepts">Concept Work</a></a>
                 </p>
             </div>
-            <div id="item-2">
-                <div id="preview">
-                    <div id="about--text">
-                        <h1>Hello</h1>
-                        <br>
-                        <h3>I love creating<br>
-                            digital experiences<br>
-                            that look, feel, and<br>
-                            work beautifully. <br>
-                            I love to learn and<br>
-                            experiement with new ideas.<br>
-                            Enjoy my portfolio and <br>
-                            lets connect.<br><br>
-                        </h3>
-                        <h2>Have a great day.</h2>
-                    </div>
-                </div>
-            </div> 
         </div>
 
     </div>
-    <script src="https://kit.fontawesome.com/435ba2ae23.js" crossorigin="anonymous"></script>
+    
+    <script src="grained.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="js/index.js"></script>
-</body> 
+</body>
 </html>

@@ -1,97 +1,193 @@
-// Fade in various elements of pages
-gsap.from(".fade", {stagger: 1, opacity: 0, duration:4});
 
-// Show preview of project
-$(document).ready(function() {
-  TweenMax.set("#preview", { width: 0 });
-  var preview = document.querySelector("#preview")
-  var t1 = new TimelineLite();
-
-  $(document)
-    .on("mouseenter touchstart", ".page", function(evt) {
-      t1 = new TimelineLite();
-      t1.to($("#preview"), 1, {
-        width: preview.offsetHeight,
-        ease: Expo.ease
-      });
-    })
-    .on("mouseleave touchend", ".page", function(evt) {
-      t1.to($("#preview"), .5, {
-        width: 0,
-        ease: Expo.ease
-      });
-    });
-});
-
-
-
-$(".page1").mouseenter(function() {
-    $("#about--text").css({ "visibility": "visible", "width": "600px" });
-    $("#preview").css({ "background-image": ''});
-});
-$(".page2").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/tenzies.jpg")'});
-    $("#about--text").css({ "visibility": "hidden" });
-});
-$(".page3").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/blackJack.jpg")'});
-    $("#about--text").css({ "visibility": "hidden" });
-});
-$(".page4").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/quiz.jpg")'});
-    $("#about--text").css({ "visibility": "hidden" });
-});
-$(".page5").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/theFishNet.jpg")'});
-    $("#about--text").css({ "visibility": "hidden" });
-});
-$(".page6").mouseenter(function() {
-    $("#preview").css({ "background-image": 'url("../images/ArtGallery.jpg")'});
-    $("#about--text").css({ "visibility": "hidden" });
-});
-
-// Animtaion for page intro
-function fadeOut() {
-
-  TweenMax.to(".myBtn", 1, {
-       y: -100,
-       opacity: 0
-  });
-
-  TweenMax.to(".screen", 2, {
-       y: -400,
-       opacity: 0,
-       ease: Power2.easeInOut,
-       delay: 2
-  });
-
-  TweenMax.from(".overlay", 2, {
-       ease: Power2.easeInOut
-  });
-
-  TweenMax.to(".overlay", 2, {
-       delay: 2.6,
-       top: "-110%",
-       ease: Expo.easeInOut
-  });
-
-  TweenMax.to(".overlay-2", 2, {
-       delay: 3,
-       top: "-110%",
-       ease: Expo.easeInOut
-  });
-
-  TweenMax.from(".content", 2, {
-       delay: 3.2,
-       opacity: 0,
-       ease: Power2.easeInOut
-  });
-
-  TweenMax.to(".content", 2, {
-       opacity: 1,
-       y: -300,
-       delay: 3.2,
-       ease: Power2.easeInOut
-  });
-
-  }
+var options = {
+     animate: true,
+     patternWidth: 100,
+     patternHeight: 100,
+     grainOpacity: 0.03,
+     grainDensity: 1,
+     grainWidth: 1,
+     grainHeight: 1
+ };
+ 
+ 
+ grained('#container',options);
+ 
+ 
+ gsap.registerPlugin(ScrollTrigger);
+ 
+ const lenis = new Lenis({
+   duration: 2,
+   easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t))
+ });
+ 
+ function raf(time) {
+     lenis.raf(time)
+     requestAnimationFrame(raf)
+ };
+ 
+ requestAnimationFrame(raf);
+ 
+ gsap.to("iframe", {
+     scrollTrigger: {
+         trigger: "#content",
+         start: "top bottom",
+         end: "bottom bottom",
+         scrub: 1
+     },
+     scale: 2,
+     rotation: 90,
+     opacity: .5
+ });
+ 
+ gsap.from("#about", {
+     scrollTrigger: {
+         trigger: "#about",
+         start: "top 80%",
+         end: "bottom 60%",
+         scrub: 1
+     },
+     opacity: 0,
+     skewY: -4,
+     y: 5
+ });
+ 
+ gsap.from("#projects", {
+     scrollTrigger: {
+         trigger: "#projects",
+         start: "top 80%",
+         end: "bottom 60%",
+         scrub: 1
+     },
+     opacity: 0,
+     skewY: -4,
+     y: 5
+ });
+ 
+ gsap.from("#inspiration", {
+     scrollTrigger: {
+         trigger: "#inspiration",
+         start: "top 80%",
+         end: "bottom 60%",
+         scrub: 1
+     },
+     opacity: 0,
+     skewY: -4,
+     y: 5
+ });
+ 
+ gsap.from("#tools", {
+     scrollTrigger: {
+         trigger: "#tools",
+         start: "top 80%",
+         end: "bottom 60%",
+         scrub: 1
+     },
+     opacity: 0,
+     skewY: -4,
+     y: 5
+ });
+ 
+ gsap.from("#mission", {
+     scrollTrigger: {
+         trigger: "#mission",
+         start: "top 80%",
+         end: "bottom 50%",
+         scrub: 1
+     },
+     opacity: 0,
+     skewY: -2,
+     y: 5
+ });
+ 
+ gsap.timeline().from(".intro--text1", {
+     opacity: 0,
+     x: -100,
+     duration: 1,
+     delay: 1.5
+ }).to(".intro--text1", {
+     opacity: 0,
+     x: 100,
+     duration: .5
+ }).from(".intro--text2", {
+     opacity: 0,
+     x: -100,
+     duration: 1
+ }).to(".intro--text2", {
+     opacity: 0,
+     x: 100,
+     duration: .5
+ }).from(".intro--text3", {
+     opacity: 0,
+     x: -100,
+     duration: 1
+ }).to(".intro--text3", {
+     opacity: 0,
+     x: 100,
+     duration: .5
+ }).from("#title, #footer, #content, iframe", {
+     opacity: 0,
+     duration: 1,
+     y: 100
+ });
+ 
+ const items = document.querySelectorAll(".item");
+ items.forEach(item => {
+     gsap.from(item, {
+         scrollTrigger: {
+             trigger: item,
+             start: "top bottom",
+             end: "top 30%",
+             scrub: 1
+         },
+         opacity: .05
+     })
+ })
+ 
+ 
+ 
+ 
+ const cursor = document.querySelector('.cursor');
+ 
+ const animateit = function (e) {
+       const span = this.querySelector('span');
+       const { offsetX: x, offsetY: y } = e,
+       { offsetWidth: width, offsetHeight: height } = this,
+ 
+       move = 25,
+       xMove = x / width * (move * 2) - move,
+       yMove = y / height * (move * 2) - move;
+ 
+       span.style.transform = `translate(${xMove}px, ${yMove}px)`;
+ 
+       if (e.type === 'mouseleave') span.style.transform = '';
+ };
+ 
+ const editCursor = e => {
+       const { clientX: x, clientY: y } = e;
+       cursor.style.left = x + 'px';
+       cursor.style.top = y + 'px';
+ };
+ 
+ window.addEventListener('mousemove', editCursor);
+ 
+ const links = document.querySelectorAll(".link");
+ 
+ links.forEach(link => {
+     link.addEventListener("mouseenter", () => {
+         gsap.to(".cursor", {
+             duration: .25,
+             transformOrigin: "center center",
+             scale: 2
+         })
+     });
+ 
+     link.addEventListener("mouseleave", () => {
+         gsap.to(".cursor", {
+             duration: .25,
+             transformOrigin: "center center",
+             scale: .5
+         })
+     });
+     
+ })
+ 
