@@ -162,31 +162,31 @@ a:-webkit-any-link:hover {
 }
 
 #item1 > .img {
-    background: url("images/MOSHED-2022-11-21-12-17-39.gif");
+    background: url("/images/MOSHED-2022-11-21-12-17-39.gif");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #item2 > .img {
-    background: url("images/projects.JPG");
+    background: url("/images/projects.JPG");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #item3 > .img {
-    background: url("images/code.JPG");
+    background: url("/images/code.JPG");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #item4 > .img {
-    background: url("images/inspiration.jpg");
+    background: url("/images/inspiration.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 #item5 > .img {
-    background: url("images/ing-otT2199XwI8-unsplash.jpg");
+    background: url("/images/ing-otT2199XwI8-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
